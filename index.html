@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rifki Kusuma Wardana's Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Playfair Display & Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            900: '#070F1E',
+                            800: '#0B192C',
+                            700: '#1E3E62',
+                            600: '#2E5077',
+                        },
+                        gold: {
+                            400: '#F4D068',
+                            500: '#D4AF37',
+                            600: '#AA820A',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(11, 25, 44, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF0B9 0%, #D4AF37 50%, #9A7B1C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border-glow:hover {
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.25);
+            border-color: rgba(212, 175, 55, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-navy-900 text-slate-200 font-sans antialiased selection:bg-gold-500 selection:text-navy-900">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-navy-800/90 backdrop-blur-md border-b border-gold-500/20 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-full border-2 border-gold-500 flex items-center justify-center bg-navy-900 text-gold-500 font-serif font-bold text-lg">
+                        RK
+                    </div>
+                    <div>
+                        <span class="text-lg font-serif font-bold tracking-wide text-white block">Rifki K. Wardana</span>
+                        <span class="text-xs text-gold-500 uppercase tracking-widest block font-medium">Rifki Kusuma Wardana's Portfolio</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#about" class="hover:text-gold-500 transition-colors">Profile</a>
+                    <a href="#academic" class="hover:text-gold-500 transition-colors">Academics & Research</a>
+                    <a href="#projects" class="hover:text-gold-500 transition-colors">Public Diplomacy</a>
+                    <a href="#recognitions" class="hover:text-gold-500 transition-colors">Recognitions</a>
+                    <a href="#skills" class="hover:text-gold-500 transition-colors">Competencies</a>
+                    <a href="#contact" class="px-5 py-2.5 rounded-full border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-navy-900 font-semibold transition-all duration-300 shadow-lg shadow-gold-500/10">
+                        Contact
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-800 border-b border-gold-500/20 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block py-2 text-slate-300 hover:text-gold-500">Profile</a>
+            <a href="#academic" class="block py-2 text-slate-300 hover:text-gold-500">Academics & Research</a>
+            <a href="#projects" class="block py-2 text-slate-300 hover:text-gold-500">Public Diplomacy</a>
+            <a href="#recognitions" class="block py-2 text-slate-300 hover:text-gold-500">Recognitions</a>
+            <a href="#skills" class="block py-2 text-slate-300 hover:text-gold-500">Competencies</a>
+            <a href="#contact" class="block mt-4 text-center py-2.5 rounded-full border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-navy-900 font-semibold">
+                Contact
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="min-h-screen pt-32 pb-20 relative flex items-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-navy-700 via-navy-800 to-navy-900">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Details -->
+                <div class="md:col-span-7 space-y-6">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs uppercase tracking-widest font-semibold">
+                        <i class="fa-solid fa-earth-americas"></i>
+                        <span>Rifki Kusuma Wardana's Portfolio</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold tracking-tight text-white leading-tight">
+                        Rifki Kusuma <br>
+                        <span class="gold-gradient-text">Wardana</span>
+                    </h1>
+
+                    <p class="text-lg text-slate-300 leading-relaxed font-light">
+                        Graduate in <strong class="text-white font-medium">International Relations from Kazan Federal University (GPA 3.69)</strong>. Specialized in Cultural Diplomacy, Multipolar Foreign Policy Analysis, and Cross-Cultural Event Management with C1 fluency in English and Russian.
+                    </p>
+
+                    <!-- Core Metrics Badge -->
+                    <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-700/60">
+                        <div>
+                            <span class="text-2xl lg:text-3xl font-serif font-bold text-gold-400">3.69</span>
+                            <span class="block text-xs text-slate-400 uppercase tracking-wider">Cum Laude GPA</span>
+                        </div>
+                        <div>
+                            <span class="text-2xl lg:text-3xl font-serif font-bold text-gold-400">4 Languages</span>
+                            <span class="block text-xs text-slate-400 uppercase tracking-wider">ID, EN, RU, DE</span>
+                        </div>
+                        <div>
+                            <span class="text-2xl lg:text-3xl font-serif font-bold text-gold-400">10+ Awards</span>
+                            <span class="block text-xs text-slate-400 uppercase tracking-wider">Diplomatic Recognitions</span>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a href="https://docs.google.com/document/d/1fegTzAZG3O1688JDKd5daaKTuQXKdDo1_EedMnI6G6U/edit" target="_blank" class="px-6 py-3.5 rounded-lg bg-gold-500 text-navy-900 font-semibold hover:bg-gold-400 transition-all shadow-lg shadow-gold-500/20 flex items-center space-x-2">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <span>View Kemlu CV (Doc)</span>
+                        </a>
+                        <a href="#projects" class="px-6 py-3.5 rounded-lg border border-slate-600 hover:border-gold-500 text-slate-200 hover:text-gold-400 transition-all bg-navy-800/50 flex items-center space-x-2">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <span>Explore Portfolio</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Card / Avatar -->
+                <div class="md:col-span-5">
+                    <div class="glass-card rounded-2xl p-6 sm:p-8 relative gold-border-glow transition-all duration-500">
+                        <div class="absolute -top-3 -right-3 bg-gold-500 text-navy-900 font-bold text-xs uppercase px-3 py-1 rounded-full shadow-md">
+                            Ministry Candidate
+                        </div>
+
+                        <div class="text-center space-y-4">
+                            <div class="w-32 h-32 sm:w-40 sm:h-40 mx-auto rounded-full border-4 border-gold-500/40 p-1 bg-navy-900 overflow-hidden relative">
+                                <img src="https://placehold.co/400x400/0B192C/D4AF37?text=RKW+Diplomat" alt="Rifki Kusuma Wardana" class="w-full h-full object-cover rounded-full">
+                            </div>
+
+                            <div>
+                                <h3 class="text-xl font-serif font-bold text-white">Rifki Kusuma Wardana</h3>
+                                <p class="text-sm text-gold-400">Bachelor of Arts (B.A.) in IR</p>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-navy-900/80 border border-slate-700/50 text-left text-xs space-y-2 text-slate-300">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-slate-400">Target Institution:</span>
+                                    <span class="font-semibold text-gold-400">Kemlu RI / Diplomatic Service</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-slate-400">University:</span>
+                                    <span class="font-semibold text-white">Kazan Federal University</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-slate-400">Specialization:</span>
+                                    <span class="font-semibold text-white">Cultural Diplomacy</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-slate-400">Location:</span>
+                                    <span class="font-semibold text-white">Serang, Banten / Global</span>
+                                </div>
+                            </div>
+
+                            <div class="pt-2 flex justify-center space-x-4 text-slate-300 text-lg">
+                                <a href="mailto:rifki3083@gmail.com" class="p-2.5 rounded-full bg-navy-700/60 hover:bg-gold-500 hover:text-navy-900 transition-all"><i class="fa-solid fa-envelope"></i></a>
+                                <a href="https://ru.linkedin.com/in/rifkiwardana" target="_blank" class="p-2.5 rounded-full bg-navy-700/60 hover:bg-gold-500 hover:text-navy-900 transition-all"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="tel:+628871172973" class="p-2.5 rounded-full bg-navy-700/60 hover:bg-gold-500 hover:text-navy-900 transition-all"><i class="fa-solid fa-phone"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic & Research Section -->
+    <section id="academic" class="py-20 bg-navy-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold-500 text-xs uppercase tracking-widest font-semibold block mb-2">Academic Excellence</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">Higher Education & Strategic Thesis</h2>
+                <div class="w-16 h-1 bg-gold-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-12 gap-8 items-stretch">
+                <!-- University Profile -->
+                <div class="md:col-span-5 glass-card rounded-2xl p-8 border-gold-500/20 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-gold-500/20 text-gold-400 border border-gold-500/30">2022 – 2026</span>
+                            <span class="text-slate-400 text-sm"><i class="fa-solid fa-location-dot text-gold-500 mr-1"></i> Kazan, Russia</span>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-white mb-2">Kazan Federal University</h3>
+                        <p class="text-gold-400 font-medium mb-4">Bachelor of Arts in International Relations</p>
+                        <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                            Constructed a comprehensive foundation in international law, foreign policy mechanisms, public diplomacy, and bilateral dialogue dynamics within Russia and the Asia-Pacific region.
+                        </p>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-navy-900 border border-slate-700">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="text-xs text-slate-400 uppercase tracking-wider">Cumulative GPA</span>
+                            <span class="text-lg font-bold text-gold-400">3.69 / 4.00</span>
+                        </div>
+                        <div class="w-full bg-navy-700 h-2 rounded-full overflow-hidden">
+                            <div class="bg-gold-500 h-full rounded-full" style="width: 92.25%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thesis Highlight -->
+                <div class="md:col-span-7 glass-card rounded-2xl p-8 border-gold-500/20 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-2 text-gold-400 text-xs font-semibold uppercase tracking-wider mb-3">
+                            <i class="fa-solid fa-scroll"></i>
+                            <span>Undergraduate Thesis Focus</span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-serif font-bold text-white leading-snug mb-4">
+                            "Cultural Diplomacy as a Strategic Instrument for Strengthening Relations Between Indonesia and Russia in the Context of an Emerging Multipolar World"
+                        </h3>
+                        <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                            Analyzed soft power frameworks, educational exchanges, performing arts initiatives, and government-to-government cultural agreements as vital instruments in mitigating strategic friction and enhancing bilateral partnerships amidst global geopolitical shifts.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Relevant Scientific Coursework</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 rounded-lg bg-navy-900 text-slate-300 text-xs border border-slate-700">Foreign Policy Analysis</span>
+                            <span class="px-3 py-1 rounded-lg bg-navy-900 text-slate-300 text-xs border border-slate-700">Public Diplomacy & Soft Power</span>
+                            <span class="px-3 py-1 rounded-lg bg-navy-900 text-slate-300 text-xs border border-slate-700">Multilateralism & Global Governance</span>
+                            <span class="px-3 py-1 rounded-lg bg-navy-900 text-slate-300 text-xs border border-slate-700">Intercultural Communication</span>
+                            <span class="px-3 py-1 rounded-lg bg-navy-900 text-slate-300 text-xs border border-slate-700">Regional Integration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Public Diplomacy & Projects Section -->
+    <section id="projects" class="py-20 bg-navy-900 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-gold-500 text-xs uppercase tracking-widest font-semibold block mb-2">Leadership & Engagements</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">Public Diplomacy & Initiatives</h2>
+                <div class="w-16 h-1 bg-gold-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 mb-12" id="filter-buttons">
+                <button onclick="filterProjects('all')" class="project-filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-gold-500 text-navy-900 transition-all shadow-md" data-filter="all">All Projects</button>
+                <button onclick="filterProjects('diplomacy')" class="project-filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-navy-800 text-slate-300 hover:text-gold-400 border border-slate-700 transition-all" data-filter="diplomacy">Diplomacy & Events</button>
+                <button onclick="filterProjects('speaking')" class="project-filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-navy-800 text-slate-300 hover:text-gold-400 border border-slate-700 transition-all" data-filter="speaking">Keynote Lectures</button>
+                <button onclick="filterProjects('ambassadorship')" class="project-filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-navy-800 text-slate-300 hover:text-gold-400 border border-slate-700 transition-all" data-filter="ambassadorship">Ambassadorships</button>
+            </div>
+
+            <!-- Project Cards Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+                
+                <!-- Project 1 -->
+                <div class="project-card glass-card rounded-xl overflow-hidden border border-slate-700/60 gold-border-glow transition-all duration-300 flex flex-col justify-between" data-category="diplomacy">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-xs font-semibold text-gold-400 uppercase tracking-wider">KFU & PERMIRA Kazan</span>
+                            <span class="text-xs text-slate-400">2023</span>
+                        </div>
+                        <h3 class="text-lg font-serif font-bold text-white mb-2">Indonesian Cultural Day 2023</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                            Served on the Steering Committee and led VIP Protocol for diplomatic guests, international university leaders, and regional representatives during a major cultural exhibition.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-navy-800/80 border-t border-slate-700/50 flex justify-between items-center">
+                        <span class="text-xs text-slate-400">Role: Steering Committee & Protocol</span>
+                        <i class="fa-solid fa-award text-gold-400"></i>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card glass-card rounded-xl overflow-hidden border border-slate-700/60 gold-border-glow transition-all duration-300 flex flex-col justify-between" data-category="speaking">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-xs font-semibold text-gold-400 uppercase tracking-wider">Universitas Ma Chung</span>
+                            <span class="text-xs text-slate-400">2024</span>
+                        </div>
+                        <h3 class="text-lg font-serif font-bold text-white mb-2">Guest Lecturer: Social Media Optimization</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                            Delivered an academic lecture to students in the E-Business & Digital Management course on strategic media optimization and international digital communication strategies.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-navy-800/80 border-t border-slate-700/50 flex justify-between items-center">
+                        <span class="text-xs text-slate-400">Role: Guest Lecturer</span>
+                        <i class="fa-solid fa-chalkboard-user text-gold-400"></i>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card glass-card rounded-xl overflow-hidden border border-slate-700/60 gold-border-glow transition-all duration-300 flex flex-col justify-between" data-category="speaking">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-xs font-semibold text-gold-400 uppercase tracking-wider">Pertamina EP</span>
+                            <span class="text-xs text-slate-400">2024</span>
+                        </div>
+                        <h3 class="text-lg font-serif font-bold text-white mb-2">Presenter: International Energy Conference</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                            Presented research findings at Pertamina EP Asset 1 Prabumulih Field on "Waste Recycling Opportunity to Gain Rubles and Rupiah" exploring circular economic avenues.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-navy-800/80 border-t border-slate-700/50 flex justify-between items-center">
+                        <span class="text-xs text-slate-400">Role: Keynote Speaker</span>
+                        <i class="fa-solid fa-microphone text-gold-400"></i>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card glass-card rounded-xl overflow-hidden border border-slate-700/60 gold-border-glow transition-all duration-300 flex flex-col justify-between" data-category="ambassadorship">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-xs font-semibold text-gold-400 uppercase tracking-wider">KBRI Moscow & PERMIRA</span>
+                            <span class="text-xs text-slate-400">2022</span>
+                        </div>
+                        <h3 class="text-lg font-serif font-bold text-white mb-2">Wakil II Putra PERMIRA & Scholarship</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                            Awarded 2nd Runner-Up in the Putra-Putri PERMIRA National Selection and earned a $500 academic scholarship from the Embassy of the Republic of Indonesia in Moscow.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-navy-800/80 border-t border-slate-700/50 flex justify-between items-center">
+                        <span class="text-xs text-slate-400">Award: National Youth Representative</span>
+                        <i class="fa-solid fa-crown text-gold-400"></i>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card glass-card rounded-xl overflow-hidden border border-slate-700/60 gold-border-glow transition-all duration-300 flex flex-col justify-between" data-category="ambassadorship">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-xs font-semibold text-gold-400 uppercase tracking-wider">Serang City Government</span>
+                            <span class="text-xs text-slate-400">2021</span>
+                        </div>
+                        <h3 class="text-lg font-serif font-bold text-white mb-2">Kang Kota Serang 2021</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                            Selected as the official Tourism & Youth Ambassador for Serang City, advocating cultural preservation, youth initiatives, and regional economic potential.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-navy-800/80 border-t border-slate-700/50 flex justify-between items-center">
+                        <span class="text-xs text-slate-400">Role: Tourism Ambassador</span>
+                        <i class="fa-solid fa-ribbon text-gold-400"></i>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card glass-card rounded-xl overflow-hidden border border-slate-700/60 gold-border-glow transition-all duration-300 flex flex-col justify-between" data-category="diplomacy">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-xs font-semibold text-gold-400 uppercase tracking-wider">Academy of Youth Diplomacy</span>
+                            <span class="text-xs text-slate-400">2026</span>
+                        </div>
+                        <h3 class="text-lg font-serif font-bold text-white mb-2">International Language Forum Speaker</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                            Invited as an expert speaker at the International Language Forum in Kazan to discuss language learning, soft power, and youth cross-border cooperation.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-navy-800/80 border-t border-slate-700/50 flex justify-between items-center">
+                        <span class="text-xs text-slate-400">Role: Diplomatic Speaker</span>
+                        <i class="fa-solid fa-comments text-gold-400"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Diplomatic Recognitions & Letters Section -->
+    <section id="recognitions" class="py-20 bg-navy-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold-500 text-xs uppercase tracking-widest font-semibold block mb-2">Verified Credentials</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">Official Letters of Appreciation</h2>
+                <div class="w-16 h-1 bg-gold-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Recognition List -->
+            <div class="space-y-4 max-w-4xl mx-auto">
+                
+                <!-- Item 1 -->
+                <div onclick="openModal('Rector\'s Letter of Appreciation', 'Kazan Federal University (2025)', 'Awarded by the Rector of KFU for outstanding personal contributions toward youth policy advancement, international student integrations, and strategic university social initiatives.')" class="glass-card p-6 rounded-xl border border-slate-700/80 hover:border-gold-500/50 cursor-pointer transition-all duration-300 flex items-center justify-between group">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-lg bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl group-hover:bg-gold-500 group-hover:text-navy-900 transition-all">
+                            <i class="fa-solid fa-certificate"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-base font-serif font-bold text-white group-hover:text-gold-400 transition-colors">Letter of Appreciation – Rector of KFU</h4>
+                            <p class="text-xs text-slate-400">Kazan Federal University (2025)</p>
+                        </div>
+                    </div>
+                    <span class="text-xs text-gold-400 font-semibold group-hover:underline">View Details <i class="fa-solid fa-chevron-right ml-1"></i></span>
+                </div>
+
+                <!-- Item 2 -->
+                <div onclick="openModal('Vice-Rector\'s Letter of Appreciation', 'Kazan Federal University (2026)', 'Recognized by the Vice-Rector for Youth Policy & Educational Activities for exemplary active participation across cultural, scientific, athletic, and international events while maintaining strong academic standing.')" class="glass-card p-6 rounded-xl border border-slate-700/80 hover:border-gold-500/50 cursor-pointer transition-all duration-300 flex items-center justify-between group">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-lg bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl group-hover:bg-gold-500 group-hover:text-navy-900 transition-all">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-base font-serif font-bold text-white group-hover:text-gold-400 transition-colors">Letter of Appreciation – Vice-Rector of KFU</h4>
+                            <p class="text-xs text-slate-400">Kazan Federal University (2026)</p>
+                        </div>
+                    </div>
+                    <span class="text-xs text-gold-400 font-semibold group-hover:underline">View Details <i class="fa-solid fa-chevron-right ml-1"></i></span>
+                </div>
+
+                <!-- Item 3 -->
+                <div onclick="openModal('Embassy Appreciation Certificate', 'KBRI Moscow (2019)', 'Signed by Ambassador Extraordinary and Plenipotentiary M. Wahid Supriyadi for invaluable support and performance contributions during Indonesian Day at Kazan Federal University.')" class="glass-card p-6 rounded-xl border border-slate-700/80 hover:border-gold-500/50 cursor-pointer transition-all duration-300 flex items-center justify-between group">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-lg bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl group-hover:bg-gold-500 group-hover:text-navy-900 transition-all">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-base font-serif font-bold text-white group-hover:text-gold-400 transition-colors">Certificate of Appreciation – Embassy of RI in Moscow</h4>
+                            <p class="text-xs text-slate-400">Signed by Ambassador M. Wahid Supriyadi (2019)</p>
+                        </div>
+                    </div>
+                    <span class="text-xs text-gold-400 font-semibold group-hover:underline">View Details <i class="fa-solid fa-chevron-right ml-1"></i></span>
+                </div>
+
+                <!-- Item 4 -->
+                <div onclick="openModal('Academy of Youth Diplomacy Appreciation', 'Kazan, Russia (2026)', 'Awarded for partnership excellence and delivering expert lectures during the International Language Forum organized by the Academy of Youth Diplomacy.')" class="glass-card p-6 rounded-xl border border-slate-700/80 hover:border-gold-500/50 cursor-pointer transition-all duration-300 flex items-center justify-between group">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-lg bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl group-hover:bg-gold-500 group-hover:text-navy-900 transition-all">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-base font-serif font-bold text-white group-hover:text-gold-400 transition-colors">Letter of Appreciation – Academy of Youth Diplomacy</h4>
+                            <p class="text-xs text-slate-400">Kazan, Russia (2026)</p>
+                        </div>
+                    </div>
+                    <span class="text-xs text-gold-400 font-semibold group-hover:underline">View Details <i class="fa-solid fa-chevron-right ml-1"></i></span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Competencies & Skills Section -->
+    <section id="skills" class="py-20 bg-navy-900 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold-500 text-xs uppercase tracking-widest font-semibold block mb-2">Diplomatic Capabilities</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">Languages & Diplomatic Skills</h2>
+                <div class="w-16 h-1 bg-gold-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Languages -->
+                <div class="glass-card p-8 rounded-2xl border-gold-500/20">
+                    <h3 class="text-xl font-serif font-bold text-white mb-6 flex items-center">
+                        <i class="fa-solid fa-language text-gold-500 mr-3"></i> Language Proficiency
+                    </h3>
+
+                    <div class="space-y-6">
+                        <!-- Indonesian -->
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="font-semibold text-white">Indonesian</span>
+                                <span class="text-gold-400 font-mono text-xs">Native / Mother Tongue</span>
+                            </div>
+                            <div class="w-full bg-navy-800 h-2.5 rounded-full overflow-hidden border border-slate-700">
+                                <div class="bg-gold-500 h-full rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+
+                        <!-- English -->
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="font-semibold text-white">English</span>
+                                <span class="text-gold-400 font-mono text-xs">C1 Advanced / Professional</span>
+                            </div>
+                            <div class="w-full bg-navy-800 h-2.5 rounded-full overflow-hidden border border-slate-700">
+                                <div class="bg-gold-500 h-full rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Russian -->
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="font-semibold text-white">Russian</span>
+                                <span class="text-gold-400 font-mono text-xs">C1 Advanced / Working Proficiency</span>
+                            </div>
+                            <div class="w-full bg-navy-800 h-2.5 rounded-full overflow-hidden border border-slate-700">
+                                <div class="bg-gold-500 h-full rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+
+                        <!-- German -->
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="font-semibold text-white">German</span>
+                                <span class="text-gold-400 font-mono text-xs">A2 Elementary</span>
+                            </div>
+                            <div class="w-full bg-navy-800 h-2.5 rounded-full overflow-hidden border border-slate-700">
+                                <div class="bg-gold-500 h-full rounded-full" style="width: 40%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical & Core Competencies -->
+                <div class="glass-card p-8 rounded-2xl border-gold-500/20 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-serif font-bold text-white mb-6 flex items-center">
+                            <i class="fa-solid fa-gears text-gold-500 mr-3"></i> Core Professional Competencies
+                        </h3>
+
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="p-3 bg-navy-900/90 rounded-lg border border-slate-700 text-xs text-slate-200 flex items-center">
+                                <i class="fa-solid fa-check text-gold-400 mr-2"></i> Foreign Policy Analysis
+                            </div>
+                            <div class="p-3 bg-navy-900/90 rounded-lg border border-slate-700 text-xs text-slate-200 flex items-center">
+                                <i class="fa-solid fa-check text-gold-400 mr-2"></i> Public Diplomacy Strategy
+                            </div>
+                            <div class="p-3 bg-navy-900/90 rounded-lg border border-slate-700 text-xs text-slate-200 flex items-center">
+                                <i class="fa-solid fa-check text-gold-400 mr-2"></i> Bilateral Negotiation Support
+                            </div>
+                            <div class="p-3 bg-navy-900/90 rounded-lg border border-slate-700 text-xs text-slate-200 flex items-center">
+                                <i class="fa-solid fa-check text-gold-400 mr-2"></i> Event & Protocol Management
+                            </div>
+                            <div class="p-3 bg-navy-900/90 rounded-lg border border-slate-700 text-xs text-slate-200 flex items-center">
+                                <i class="fa-solid fa-check text-gold-400 mr-2"></i> Research Writing
+                            </div>
+                            <div class="p-3 bg-navy-900/90 rounded-lg border border-slate-700 text-xs text-slate-200 flex items-center">
+                                <i class="fa-solid fa-check text-gold-400 mr-2"></i> AI Workflow Optimization
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-6 border-t border-slate-700">
+                        <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Software & Digital Tools</h4>
+                        <div class="flex flex-wrap gap-2 text-xs text-slate-300">
+                            <span class="px-3 py-1 bg-navy-900 rounded-md border border-slate-700"><i class="fa-solid fa-file-word text-blue-400 mr-1"></i> MS Office Suite</span>
+                            <span class="px-3 py-1 bg-navy-900 rounded-md border border-slate-700"><i class="fa-solid fa-robot text-emerald-400 mr-1"></i> AI Research Models</span>
+                            <span class="px-3 py-1 bg-navy-900 rounded-md border border-slate-700"><i class="fa-solid fa-palette text-purple-400 mr-1"></i> Canva & CapCut</span>
+                            <span class="px-3 py-1 bg-navy-900 rounded-md border border-slate-700"><i class="fa-solid fa-video text-red-400 mr-1"></i> Adobe Premiere Pro</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Footer -->
+    <footer id="contact" class="py-16 bg-navy-800 border-t border-gold-500/20 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8 items-center mb-12">
+                <div>
+                    <h3 class="text-2xl font-serif font-bold text-white mb-2">Ready for Diplomatic Contribution</h3>
+                    <p class="text-slate-300 text-sm font-light">Open for Ministry of Foreign Affairs (Kemlu RI) selections and international relations assignments.</p>
+                </div>
+                <div class="flex flex-wrap gap-4 md:justify-end">
+                    <a href="mailto:rifki3083@gmail.com" class="px-5 py-3 rounded-lg bg-gold-500 text-navy-900 font-semibold text-xs hover:bg-gold-400 transition-all">
+                        <i class="fa-solid fa-envelope mr-1"></i> Send Direct Email
+                    </a>
+                    <a href="https://docs.google.com/document/d/1fegTzAZG3O1688JDKd5daaKTuQXKdDo1_EedMnI6G6U/edit" target="_blank" class="px-5 py-3 rounded-lg border border-gold-500 text-gold-400 font-semibold text-xs hover:bg-gold-500 hover:text-navy-900 transition-all">
+                        <i class="fa-solid fa-external-link mr-1"></i> View Kemlu Doc
+                    </a>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-700/60 flex flex-col sm:flex-row justify-between items-center text-xs">
+                <p>&copy; 2026 Rifki Kusuma Wardana. All Rights Reserved.</p>
+                <div class="flex space-x-6 mt-4 sm:mt-0">
+                    <a href="https://ru.linkedin.com/in/rifkiwardana" target="_blank" class="hover:text-gold-400 transition-colors">LinkedIn Profile</a>
+                    <span>|</span>
+                    <span>Serang, Banten, Indonesia</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Detail Modal -->
+    <div id="credential-modal" class="fixed inset-0 z-50 hidden bg-navy-900/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="glass-card rounded-2xl max-w-lg w-full p-6 sm:p-8 border-gold-500/40 relative transform transition-all scale-95 opacity-0 duration-300" id="modal-content">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div class="w-12 h-12 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center text-xl mb-4">
+                <i class="fa-solid fa-award"></i>
+            </div>
+            <h3 class="text-xl font-serif font-bold text-white mb-1" id="modal-title">Recognition Title</h3>
+            <p class="text-xs text-gold-400 font-mono mb-4" id="modal-issuer">Issuer & Year</p>
+            <p class="text-sm text-slate-300 leading-relaxed mb-6" id="modal-description">Description text goes here.</p>
+            <button onclick="closeModal()" class="w-full py-2.5 rounded-lg bg-gold-500 text-navy-900 font-semibold text-xs hover:bg-gold-400 transition-all">
+                Close View
+            </button>
+        </div>
+    </div>
+
+    <!-- Embedded Interactivity JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Filter Projects
+        function filterProjects(category) {
+            const cards = document.querySelectorAll('.project-card');
+            const buttons = document.querySelectorAll('.project-filter-btn');
+
+            buttons.forEach(btn => {
+                if (btn.getAttribute('data-filter') === category) {
+                    btn.classList.remove('bg-navy-800', 'text-slate-300');
+                    btn.classList.add('bg-gold-500', 'text-navy-900');
+                } else {
+                    btn.classList.remove('bg-gold-500', 'text-navy-900');
+                    btn.classList.add('bg-navy-800', 'text-slate-300');
+                }
+            });
+
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Modal Logic
+        const modal = document.getElementById('credential-modal');
+        const modalContent = document.getElementById('modal-content');
+        const modalTitle = document.getElementById('modal-title');
+        const modalIssuer = document.getElementById('modal-issuer');
+        const modalDescription = document.getElementById('modal-description');
+
+        function openModal(title, issuer, description) {
+            modalTitle.textContent = title;
+            modalIssuer.textContent = issuer;
+            modalDescription.textContent = description;
+
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modalContent.classList.remove('scale-95', 'opacity-0');
+                modalContent.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        }
+
+        function closeModal() {
+            modalContent.classList.remove('scale-100', 'opacity-100');
+            modalContent.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        // Close Modal on Background Click
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
